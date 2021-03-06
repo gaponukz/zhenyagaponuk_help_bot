@@ -7,7 +7,7 @@ import aioschedule
 import json
 import logging
 
-TOKEN = "1549669090:AAEtDBdzYf_le6Dvx_DRNiO2qtBOIeG9lAM"
+TOKEN = os.environ.get('TOKEN')
 
 WEBHOOK_HOST = 'https://zhenyagaponukhelpbot.herokuapp.com'
 WEBHOOK_PATH = '/webhook/'
@@ -16,7 +16,7 @@ WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 WEBAPP_HOST = '0.0.0.0'
 WEBAPP_PORT = os.environ.get('PORT')
 
-bot = Bot(token = '1632180424:AAHiioPQ0uCxSi-p4sQ5MoHtiEc0Gsiw3Dk')
+bot = Bot(token = TOKEN)
 bot_name = 'Zhenyagaponuk Bot'
 dp = Dispatcher(bot)
 
